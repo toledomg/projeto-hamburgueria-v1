@@ -1,9 +1,10 @@
 import "./styles/index.css";
+import { HeadersComponent } from "./components";
 
 function App() {
   return (
     <div className="App">
-      <h1>Teste</h1>
+      <HeadersComponent />
     </div>
   );
 }
