@@ -1,12 +1,12 @@
-# S1-31 | 🏁 Entrega - Projeto: Nu Kenzie
+# S2-16 | 🏁 Entrega - Projeto: Hamburgueria da Kenzie
 
-- [URL Pages](https://automatic-carnival-j88qgwo.pages.github.io/)
+- [URL VERCEL](https://hamburgueria-kenzie-toledomg.vercel.app/)
 
-- [URL Repo GIT](https://github.com/Kenzie-Academy-Brasil-Developers/react-entrega-s1-template-nu-kenzie-toledomg)
+- [URL Repo GIT](https://github.com/Kenzie-Academy-Brasil-Developers/react-entrega-template-hamburgueria-da-kenzie-toledomg)
 
-- [URL FIGMA](https://www.figma.com/file/h8s0VHmSEUucfc7B3igKbb/M3---Gerenciador-de-Finan%C3%A7as?node-id=110%3A353&t=r7YpvpW0fXkznK6a-0)
+- [URL FIGMA](https://www.figma.com/file/Nx4WZEFXnHzeFsxRaw8y18/M3---1B07---Entrega---Hamburgueria-da-Kenzie?node-id=0%3A1&t=Qq7qkngQctyHHdcW-0)
 
-- [URL VERCEL](https://nu-kenzie-toledomg.vercel.app/)
+- [URL Pages](https://laughing-adventure-wlojqme.pages.github.io/)
 
 #
 
