@@ -1,0 +1,18 @@
+:root {
+  --font-primary: "Nunito", sans-serif;
+  --font-secondary: "Inter", sans-serif;
+
+  --color-primary: #fd377e;
+  --color-primary-2: #e34981;
+  --color-secondary: #03b898;
+
+  --color-gray-4: #212529;
+  --color-gray-3: #868e96;
+  --color-gray-2: #e9ecef;
+  --color-gray-1: #f8f9fa;
+  --color-gray-0: #d9dbdf;
+}
+
+main {
+  font-family: var(--font-primary);
+}
