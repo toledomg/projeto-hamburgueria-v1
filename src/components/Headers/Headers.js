@@ -13,12 +13,12 @@ function Headers({ productsList, search, setSearch, searchList }) {
           <img className="logo" src={logo} alt="logo-hamburgueria-kenzie" />
         </div>
         <FormSearch setSearch={setSearch} />
-        {search && (
+        {/* {search && (
           <div>
             <p>Resultados de busca para: {search}</p>
             <button onClick={() => setSearch("")}>Limpar a busca</button>
           </div>
-        )}
+        )} */}
       </div>
     </header>
   );
