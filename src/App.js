@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import { api } from "./services/api";
 
 import "./styles/index.css";
 import { HeadersComponent } from "./components";
-import ProductList from "./components/Product/ProductList/ProductList";
+
 import Cart from "./components/Cart/Cart";
+import ProductList from "./components/ProductList/ProductList";
 
 function App() {
   const localCart = localStorage.getItem("@HamburgerKenzie");
@@ -13,6 +16,7 @@ function App() {
   const [cartList, setCartList] = useState(
     localCart ? JSON.parse(localCart) : []
   );
+  const [search, setSeach] = useState([]);
 
   useEffect(() => {
     async function loadProduct() {
@@ -32,14 +36,16 @@ function App() {
 
   const addToCart = (currentProduct) => {
     if (!cartList.some((product) => product.id === currentProduct.id)) {
+      toast.success("Lanche adicionado ao seu Carrinho!");
       setCartList([...cartList, currentProduct]);
     } else {
-      alert("Lanche ja consta em seu ao Carrinho");
+      toast.error("Lanche ja consta em seu ao Carrinho!");
     }
   };
 
   const removeToCart = (currentId) => {
     if (window.confirm("Deseja excluir esse produto?")) {
+      toast.info("Produto excluído com Sucesso");
       const newCart = cartList.filter((product) => product.id !== currentId);
       setCartList(newCart);
     }
@@ -47,7 +53,10 @@ function App() {
 
   const removeCartTotal = () => {
     const emptySale = [];
-    setCartList(emptySale);
+    if (window.confirm("Tem certeza que deseja limpar seu Carrinho?")) {
+      toast.info("Carrinho limpo com Sucesso");
+      setCartList(emptySale);
+    }
   };
 
   const soma = cartList.reduce((valorAnterior, valorAtual) => {
@@ -58,7 +67,8 @@ function App() {
 
   return (
     <div className="App">
-      <HeadersComponent />
+      <HeadersComponent productsList={productsList} />
+
       <Cart
         cartList={cartList}
         setCartList={setCartList}
@@ -67,6 +77,19 @@ function App() {
         removeCartTotal={removeCartTotal}
       />
       <ProductList productsList={productsList} addToCart={addToCart} />
+
+      <ToastContainer
+        position="bottom-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
     </div>
   );
 }
