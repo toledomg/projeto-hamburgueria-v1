@@ -69,8 +69,8 @@ function App() {
   const searchList = productsList.filter((product) => {
     return search === ""
       ? true
-      : product.name.toLowerCase().includes(search) ||
-          product.category.toLowerCase().includes(search);
+      : product.name.toLowerCase().includes(search.toLowerCase()) ||
+          product.category.toLowerCase().includes(search.toLowerCase());
   });
 
   return (
@@ -89,7 +89,13 @@ function App() {
         soma={soma}
         removeCartTotal={removeCartTotal}
       />
-      <ProductList searchList={searchList} addToCart={addToCart} />
+      <ProductList
+        search={search}
+        setSearch={setSearch}
+        searchList={searchList}
+        addToCart={addToCart}
+        setCartList={setCartList}
+      />
 
       <ToastContainer
         position="bottom-right"
