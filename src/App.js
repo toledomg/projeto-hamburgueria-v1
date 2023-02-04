@@ -38,8 +38,12 @@ function App() {
     }
   };
 
+  const removeCartTotal = () => {
+    const emptySale = [];
+    setCartList(emptySale);
+  };
+
   const soma = cartList.reduce((valorAnterior, valorAtual) => {
-    console.log(cartList);
     return valorAtual.price
       ? valorAnterior + Number(valorAtual.price)
       : valorAnterior - Number(valorAtual.price);
@@ -48,7 +52,13 @@ function App() {
   return (
     <div className="App">
       <HeadersComponent />
-      <Cart cartList={cartList} removeToCart={removeToCart} soma={soma} />
+      <Cart
+        cartList={cartList}
+        setCartList={setCartList}
+        removeToCart={removeToCart}
+        soma={soma}
+        removeCartTotal={removeCartTotal}
+      />
       <ProductList productsList={productsList} addToCart={addToCart} />
     </div>
   );
