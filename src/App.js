@@ -4,7 +4,7 @@ import { api } from "./services/api";
 
 import "./styles/index.css";
 import { HeadersComponent } from "./components";
-import ProductList from "./components/ProductList/ProductList";
+import ProductList from "./components/Product/ProductList/ProductList";
 import Cart from "./components/Cart/Cart";
 
 function App() {
@@ -33,8 +33,10 @@ function App() {
   };
 
   const removeToCart = (currentId) => {
-    const newCart = cartList.filter((product) => product.id !== currentId);
-    setCartList(newCart);
+    if (window.confirm("Deseja excluir esse produto?")) {
+      const newCart = cartList.filter((product) => product.id !== currentId);
+      setCartList(newCart);
+    }
   };
 
   return (
