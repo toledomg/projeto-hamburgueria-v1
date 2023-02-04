@@ -3,7 +3,7 @@ import CartList from "./CartList/CartList";
 import CartVazio from "./CartVazio/CartVazio";
 import TotalValue from "./TotalValue/TotalValue";
 
-function Cart({ cartList, removeToCart }) {
+function Cart({ cartList, removeToCart, soma }) {
   return (
     <div>
       <h1>Carrinho de Compras</h1>
@@ -17,7 +17,7 @@ function Cart({ cartList, removeToCart }) {
                 removeToCart={removeToCart}
               />
             ))}
-            <TotalValue />
+            <TotalValue soma={Number(soma)} />
           </>
         ) : (
           <CartVazio />
