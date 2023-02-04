@@ -5,13 +5,7 @@ import styles from "./styles.module.css";
 import logo from "../../assets/img/logo.svg";
 import FormSearch from "./FormSearch/FormSearch";
 
-function Headers({ productsList }) {
-  const [search, setSearch] = useState([]);
-
-  const searchList = productsList.filter((product) => {
-    return search === "" ? true : product.name.toLowerCase().includes(search);
-  });
-
+function Headers({ productsList, search, setSearch, searchList }) {
   return (
     <header className={styles.Headers}>
       <div>

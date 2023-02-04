@@ -17,7 +17,7 @@ function App() {
   const [cartList, setCartList] = useState(
     localCart ? JSON.parse(localCart) : []
   );
-  const [search, setSeach] = useState([]);
+  const [search, setSearch] = useState([]);
 
   useEffect(() => {
     async function loadProduct() {
@@ -66,9 +66,21 @@ function App() {
       : valorAnterior - Number(valorAtual.price);
   }, 0);
 
+  const searchList = productsList.filter((product) => {
+    return search === ""
+      ? true
+      : product.name.toLowerCase().includes(search) ||
+          product.category.toLowerCase().includes(search);
+  });
+
   return (
     <div className="App">
-      <HeadersComponent productsList={productsList} />
+      <HeadersComponent
+        productsList={productsList}
+        search={search}
+        setSearch={setSearch}
+        searchList={searchList}
+      />
 
       <Cart
         cartList={cartList}
@@ -77,7 +89,7 @@ function App() {
         soma={soma}
         removeCartTotal={removeCartTotal}
       />
-      <ProductList productsList={productsList} addToCart={addToCart} />
+      <ProductList searchList={searchList} addToCart={addToCart} />
 
       <ToastContainer
         position="bottom-right"
