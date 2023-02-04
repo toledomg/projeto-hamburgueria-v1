@@ -8,8 +8,11 @@ import ProductList from "./components/Product/ProductList/ProductList";
 import Cart from "./components/Cart/Cart";
 
 function App() {
+  const localCart = localStorage.getItem("@HamburgerKenzie");
   const [productsList, setProductsList] = useState([]);
-  const [cartList, setCartList] = useState([]);
+  const [cartList, setCartList] = useState(
+    localCart ? JSON.parse(localCart) : []
+  );
 
   useEffect(() => {
     async function loadProduct() {
@@ -22,6 +25,10 @@ function App() {
     }
     loadProduct();
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem("@HamburgerKenzie", JSON.stringify(cartList));
+  }, [cartList]);
 
   const addToCart = (currentProduct) => {
     if (!cartList.some((product) => product.id === currentProduct.id)) {

@@ -1,7 +1,6 @@
 import React from "react";
 
 function TotalValue({ setCartList, soma, removeCartTotal }) {
-  console.log(setCartList);
   return (
     <div>
       <h3>Valor Total: R$ {parseFloat(soma).toFixed(2).replace(".", ",")}</h3>
