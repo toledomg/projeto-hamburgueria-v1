@@ -16,7 +16,6 @@ function App() {
       try {
         const response = await api.get("products");
         setProductsList(response.data);
-        console.log(response.data);
       } catch (error) {
         console.log(error);
       }
@@ -39,10 +38,17 @@ function App() {
     }
   };
 
+  const soma = cartList.reduce((valorAnterior, valorAtual) => {
+    console.log(cartList);
+    return valorAtual.price
+      ? valorAnterior + Number(valorAtual.price)
+      : valorAnterior - Number(valorAtual.price);
+  }, 0);
+
   return (
     <div className="App">
       <HeadersComponent />
-      <Cart cartList={cartList} removeToCart={removeToCart} />
+      <Cart cartList={cartList} removeToCart={removeToCart} soma={soma} />
       <ProductList productsList={productsList} addToCart={addToCart} />
     </div>
   );

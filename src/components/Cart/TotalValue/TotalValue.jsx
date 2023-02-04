@@ -1,9 +1,9 @@
 import React from "react";
 
-function TotalValue() {
+function TotalValue({ soma }) {
   return (
     <div>
-      <h3>Valor Total:</h3>
+      <h3>Valor Total: R$ {parseFloat(soma).toFixed(2).replace(".", ",")}</h3>
     </div>
   );
 }
