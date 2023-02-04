@@ -6,8 +6,6 @@ import logo from "../../assets/img/logo.svg";
 import FormSearch from "./FormSearch/FormSearch";
 
 function Headers({ productsList, search, setSearch, searchList }) {
-  const [products, setProducts] = useState([]);
-
   return (
     <header className={styles.Headers}>
       <div>
@@ -15,8 +13,6 @@ function Headers({ productsList, search, setSearch, searchList }) {
           <img className="logo" src={logo} alt="logo-hamburgueria-kenzie" />
         </div>
         <FormSearch setSearch={setSearch} />
-        {console.log(search)}
-        {console.log(searchList)}
         {search && (
           <div>
             <p>Resultados de busca para: {search}</p>

@@ -67,7 +67,10 @@ function App() {
   }, 0);
 
   const searchList = productsList.filter((product) => {
-    return search === "" ? true : product.name.toLowerCase().includes(search);
+    return search === ""
+      ? true
+      : product.name.toLowerCase().includes(search) ||
+          product.category.toLowerCase().includes(search);
   });
 
   return (
