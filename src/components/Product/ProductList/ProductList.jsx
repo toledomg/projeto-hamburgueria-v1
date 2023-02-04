@@ -1,10 +1,10 @@
 import React from "react";
 import ProductCard from "./../ProductCard/ProductCard";
 
-function ProductList({ productsList, addToCart }) {
+function ProductList({ searchList, addToCart }) {
   return (
     <ul>
-      {productsList.map((product) => (
+      {searchList.map((product) => (
         <ProductCard key={product.id} product={product} addToCart={addToCart} />
       ))}
     </ul>

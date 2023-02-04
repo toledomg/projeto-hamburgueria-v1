@@ -5,12 +5,8 @@ import styles from "./styles.module.css";
 import logo from "../../assets/img/logo.svg";
 import FormSearch from "./FormSearch/FormSearch";
 
-function Headers({ productsList }) {
-  const [search, setSearch] = useState([]);
-
-  const searchList = productsList.filter((product) => {
-    return search === "" ? true : product.name.toLowerCase().includes(search);
-  });
+function Headers({ productsList, search, setSearch, searchList }) {
+  const [products, setProducts] = useState([]);
 
   return (
     <header className={styles.Headers}>
@@ -19,6 +15,8 @@ function Headers({ productsList }) {
           <img className="logo" src={logo} alt="logo-hamburgueria-kenzie" />
         </div>
         <FormSearch setSearch={setSearch} />
+        {console.log(search)}
+        {console.log(searchList)}
         {search && (
           <div>
             <p>Resultados de busca para: {search}</p>
