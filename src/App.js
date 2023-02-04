@@ -5,10 +5,11 @@ import "react-toastify/dist/ReactToastify.css";
 import { api } from "./services/api";
 
 import "./styles/index.css";
+
 import { HeadersComponent } from "./components";
 
 import Cart from "./components/Cart/Cart";
-import ProductList from "./components/ProductList/ProductList";
+import ProductList from "./components/Product/ProductList/ProductList";
 
 function App() {
   const localCart = localStorage.getItem("@HamburgerKenzie");
