@@ -8,8 +8,11 @@ import ProductList from "./components/Product/ProductList/ProductList";
 import Cart from "./components/Cart/Cart";
 
 function App() {
+  const localCart = localStorage.getItem("@HamburgerKenzie");
   const [productsList, setProductsList] = useState([]);
-  const [cartList, setCartList] = useState([]);
+  const [cartList, setCartList] = useState(
+    localCart ? JSON.parse(localCart) : []
+  );
 
   useEffect(() => {
     async function loadProduct() {
@@ -22,6 +25,10 @@ function App() {
     }
     loadProduct();
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem("@HamburgerKenzie", JSON.stringify(cartList));
+  }, [cartList]);
 
   const addToCart = (currentProduct) => {
     if (!cartList.some((product) => product.id === currentProduct.id)) {
@@ -38,8 +45,12 @@ function App() {
     }
   };
 
+  const removeCartTotal = () => {
+    const emptySale = [];
+    setCartList(emptySale);
+  };
+
   const soma = cartList.reduce((valorAnterior, valorAtual) => {
-    console.log(cartList);
     return valorAtual.price
       ? valorAnterior + Number(valorAtual.price)
       : valorAnterior - Number(valorAtual.price);
@@ -48,7 +59,13 @@ function App() {
   return (
     <div className="App">
       <HeadersComponent />
-      <Cart cartList={cartList} removeToCart={removeToCart} soma={soma} />
+      <Cart
+        cartList={cartList}
+        setCartList={setCartList}
+        removeToCart={removeToCart}
+        soma={soma}
+        removeCartTotal={removeCartTotal}
+      />
       <ProductList productsList={productsList} addToCart={addToCart} />
     </div>
   );
