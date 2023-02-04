@@ -69,8 +69,10 @@ function App() {
   const searchList = productsList.filter((product) => {
     return search === ""
       ? true
-      : product.name.toLowerCase().includes(search.toLowerCase()) ||
-          product.category.toLowerCase().includes(search.toLowerCase());
+      : product.name.toLowerCase().includes(search.toString().toLowerCase()) ||
+          product.category
+            .toLowerCase()
+            .includes(search.toString().toLowerCase());
   });
 
   return (
