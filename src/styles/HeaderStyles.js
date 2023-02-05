@@ -13,7 +13,7 @@ export const StyleHeaders = styled.header`
   /*  */
   div {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1400px;
     min-width: 320px;
     height: auto;
     max-height: 160px;

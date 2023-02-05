@@ -1,16 +1,15 @@
 import React from "react";
 import { useState } from "react";
 
-import styles from "./styles.module.css";
 import logo from "../../assets/img/logo.svg";
 import FormSearch from "./FormSearch/FormSearch";
 import { StyleHeaders } from "./../../styles/HeaderStyles";
 
 function Headers({ productsList, search, setSearch, searchList }) {
   return (
-    <StyleHeaders className={styles.Headers}>
+    <StyleHeaders>
       <div>
-        <div className={styles.logo}>
+        <div>
           <img className="logo" src={logo} alt="logo-hamburgueria-kenzie" />
         </div>
         <FormSearch setSearch={setSearch} />

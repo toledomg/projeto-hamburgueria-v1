@@ -4,12 +4,11 @@ import "react-toastify/dist/ReactToastify.css";
 
 import { api } from "./services/api";
 
-// import "./styles/index.css";
-
 import { HeadersComponent } from "./components";
 
 import Cart from "./components/Cart/Cart";
 import ProductList from "./components/Product/ProductList/ProductList";
+import { DivApp } from "./components/index";
 
 function App() {
   const localCart = localStorage.getItem("@HamburgerKenzie");
@@ -76,29 +75,29 @@ function App() {
   });
 
   return (
-    <div className="App">
+    <DivApp>
       <HeadersComponent
         productsList={productsList}
         search={search}
         setSearch={setSearch}
         searchList={searchList}
       />
-
-      <ProductList
-        search={search}
-        setSearch={setSearch}
-        searchList={searchList}
-        addToCart={addToCart}
-        setCartList={setCartList}
-      />
-
-      <Cart
-        cartList={cartList}
-        setCartList={setCartList}
-        removeToCart={removeToCart}
-        soma={soma}
-        removeCartTotal={removeCartTotal}
-      />
+      <div>
+        <ProductList
+          search={search}
+          setSearch={setSearch}
+          searchList={searchList}
+          addToCart={addToCart}
+          setCartList={setCartList}
+        />
+        <Cart
+          cartList={cartList}
+          setCartList={setCartList}
+          removeToCart={removeToCart}
+          soma={soma}
+          removeCartTotal={removeCartTotal}
+        />
+      </div>
 
       <ToastContainer
         position="bottom-right"
@@ -112,7 +111,7 @@ function App() {
         pauseOnHover
         theme="colored"
       />
-    </div>
+    </DivApp>
   );
 }
 
