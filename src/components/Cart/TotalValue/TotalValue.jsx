@@ -5,6 +5,7 @@ function TotalValue({ setCartList, soma, removeCartTotal }) {
   return (
     <DivTotal>
       <div>
+        <hr />
         <h3>Total</h3>
         <h2>R$ {parseFloat(soma).toFixed(2).replace(".", ",")}</h2>
       </div>
