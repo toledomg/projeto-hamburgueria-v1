@@ -4,7 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 import { api } from "./services/api";
 
-import "./styles/index.css";
+// import "./styles/index.css";
 
 import { HeadersComponent } from "./components";
 
@@ -84,19 +84,20 @@ function App() {
         searchList={searchList}
       />
 
-      <Cart
-        cartList={cartList}
-        setCartList={setCartList}
-        removeToCart={removeToCart}
-        soma={soma}
-        removeCartTotal={removeCartTotal}
-      />
       <ProductList
         search={search}
         setSearch={setSearch}
         searchList={searchList}
         addToCart={addToCart}
         setCartList={setCartList}
+      />
+
+      <Cart
+        cartList={cartList}
+        setCartList={setCartList}
+        removeToCart={removeToCart}
+        soma={soma}
+        removeCartTotal={removeCartTotal}
       />
 
       <ToastContainer

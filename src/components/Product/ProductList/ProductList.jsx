@@ -1,6 +1,7 @@
 import React from "react";
 import ProductCard from "./../ProductCard/ProductCard";
 import Vazio from "./../../Cart/CartVazio/Vazio/Vazio";
+import { UlList } from "./ContainerList";
 
 function ProductList({ searchList, addToCart, search, setSearch }) {
   return (
@@ -18,7 +19,7 @@ function ProductList({ searchList, addToCart, search, setSearch }) {
         <Vazio />
       )}
 
-      <ul>
+      <UlList>
         {searchList.map((product) => (
           <ProductCard
             key={product.id}
@@ -26,7 +27,7 @@ function ProductList({ searchList, addToCart, search, setSearch }) {
             addToCart={addToCart}
           />
         ))}
-      </ul>
+      </UlList>
     </>
   );
 }

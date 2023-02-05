@@ -1,14 +1,18 @@
 import React from "react";
+import { BtnMedium } from "./../../../styles/BtnMedium";
+import { LiCart } from "./ListStyles";
 
 function ProductCard({ product, addToCart }) {
   return (
-    <li>
+    <LiCart>
       <img src={product.img} alt={product.name} />
-      <h3>{product.name}</h3>
-      <h3>{product.category}</h3>
-      <h3>{`R$ ${product.price.toFixed(2).replace(".", ",")}`}</h3>
-      <button onClick={() => addToCart(product)}>Adicionar</button>
-    </li>
+      <div>
+        <h2>{product.name}</h2>
+        <span>{product.category}</span>
+        <h3>{`R$ ${product.price.toFixed(2).replace(".", ",")}`}</h3>
+        <BtnMedium onClick={() => addToCart(product)}>Adicionar</BtnMedium>
+      </div>
+    </LiCart>
   );
 }
 

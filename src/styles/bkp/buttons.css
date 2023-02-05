@@ -1,9 +1,7 @@
-.btnDefault {
+/* .btnDefault {
   box-sizing: border-box;
   width: 130px;
   height: 60px;
-
-  /* Auto layout */
 
   display: flex;
   flex-direction: row;
@@ -37,14 +35,12 @@
 .btnDefault:hover {
   background-color: var(--color-primary-50);
   border: 2px solid var(--color-primary-50);
-}
+} */
 
-.btnMedium {
+/* .btnMedium {
   box-sizing: border-box;
   width: 130px;
   height: 40px;
-
-  /* Auto layout */
 
   display: flex;
   flex-direction: row;
@@ -79,4 +75,4 @@
 .btnMedium:hover {
   background-color: var(--color-primary-50);
   border: 2px solid var(--color-primary-50);
-}
+} */

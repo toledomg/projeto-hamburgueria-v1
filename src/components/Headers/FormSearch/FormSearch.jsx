@@ -1,6 +1,9 @@
 import React from "react";
 import { useState } from "react";
-import styles from "./styles.module.css";
+
+import { StyledInput } from "../../../styles/InputStyles";
+import { StyledForm } from "./../../../styles/FormStyles";
+import { BtnMedium } from "./../../../styles/BtnMedium";
 
 function FormSearch({ setSearch }) {
   const [searchValue, setSearchValue] = useState([]);
@@ -12,16 +15,16 @@ function FormSearch({ setSearch }) {
   };
 
   return (
-    <form className={styles.pesquisa} onSubmit={submit}>
-      <input
+    <StyledForm onSubmit={submit}>
+      <StyledInput
         type="text"
         value={searchValue}
         onChange={(event) => setSearchValue(event.target.value)}
         placeholder="Digitar Pesquisa"
         aria-label="Digitar Pesquisa"
       />
-      <button className="btnMedium">Pesquisar</button>
-    </form>
+      <BtnMedium>Pesquisar</BtnMedium>
+    </StyledForm>
   );
 }
 

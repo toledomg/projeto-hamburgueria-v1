@@ -1,7 +1,9 @@
-/* form {
+import styled from "styled-components";
+
+export const StyledForm = styled.form`
   box-sizing: border-box;
 
-
+  /* Auto layout */
 
   display: flex;
   flex-direction: row;
@@ -14,12 +16,12 @@
   height: 60px;
 
   background: #ffffff;
- 
+  /* grey-100 */
 
   border: 2px solid #e0e0e0;
   border-radius: 8px;
-}
 
-form:focus-within {
-  border: 2px solid #333333;
-} */
+  :focus-within {
+    border: 2px solid #333333;
+  }
+`;
