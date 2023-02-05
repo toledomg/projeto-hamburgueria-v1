@@ -42,6 +42,7 @@ export const DivCart = styled.section`
 `;
 
 export const UlCart = styled.ul`
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;

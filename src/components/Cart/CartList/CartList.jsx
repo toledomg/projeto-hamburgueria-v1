@@ -1,13 +1,17 @@
 import React from "react";
+import { LiCart } from "./Styles";
 
 function CartList({ product, removeToCart }) {
   return (
-    <li>
-      <h3>{product.name}</h3>
-      <h3>{`R$ ${product.price.toFixed(2).replace(".", ",")}`}</h3>
-      {/* <span>{`Quantidade ${product.price}`}</span> */}
+    <LiCart>
+      <img src={product.img} alt={product.name} />
+      <div>
+        <h3>{product.name}</h3>
+        <span>{product.category}</span>
+        {/* <h2>{`R$ ${product.price.toFixed(2).replace(".", ",")}`}</h2> */}
+      </div>
       <button onClick={() => removeToCart(product.id)}>Remover</button>
-    </li>
+    </LiCart>
   );
 }
 

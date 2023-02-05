@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+export const VazioSection = styled.section``;
+
 export const VazioH3 = styled.h3`
   font-style: normal;
   font-weight: 700;
