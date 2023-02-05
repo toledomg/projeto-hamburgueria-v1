@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
 
-import { StyledInput } from "../../../styles/InputStyles";
-import { StyledForm } from "./../../../styles/FormStyles";
+// import { StyledInput } from "../../../styles/InputStyles";
+import { StyledForm, StyledInput } from "./../../../styles/FormStyles";
 import { BtnMedium } from "./../../../styles/BtnMedium";
 
 function FormSearch({ setSearch }) {

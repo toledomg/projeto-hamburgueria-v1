@@ -2,19 +2,13 @@ import React from "react";
 import ProductCard from "./../ProductCard/ProductCard";
 import Vazio from "./../../Cart/CartVazio/Vazio/Vazio";
 import { UlList } from "./ContainerList";
+import SearchResults from "./SearchResults";
 
 function ProductList({ searchList, addToCart, search, setSearch }) {
   return (
     <>
       {(search || []).length > 0 ? (
-        <>
-          {search && (
-            <div>
-              <p>Resultados de busca para: {search}</p>
-              <button onClick={() => setSearch("")}>Limpar a busca</button>
-            </div>
-          )}
-        </>
+        <>{search && <SearchResults search={search} setSearch={setSearch} />}</>
       ) : (
         <Vazio />
       )}

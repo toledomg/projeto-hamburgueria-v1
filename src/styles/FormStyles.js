@@ -10,7 +10,7 @@ export const StyledForm = styled.form`
   justify-content: space-between;
   align-items: center;
   padding: 0px 10px 0px 15px;
-  gap: 115px;
+  gap: 40px;
 
   width: 382px;
   height: 60px;
@@ -23,5 +23,27 @@ export const StyledForm = styled.form`
 
   :focus-within {
     border: 2px solid #333333;
+  }
+`;
+
+export const StyledInput = styled.input`
+  width: 100%;
+  height: 80%;
+
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  padding: 10px;
+
+  caret-color: var(--color-sucess);
+
+  outline: none;
+  border: none;
+
+  ::placeholder {
+    color: var(--color-gray-20);
   }
 `;
