@@ -1,22 +1,22 @@
 import styled from "styled-components";
 
-export const DivCart = styled.section`
+export const DivCart = styled.div`
   width: 380px;
   min-width: 320px;
-  height: auto;
-  min-height: 150px;
+  height: 100%;
+  max-height: 800px;
 
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-
-  gap: 20px;
 
   background: var(--color-gray-0);
   border-radius: 0px 0px 5px 5px;
 
-  margin: 0 auto;
+  margin: 30px auto;
+
+  gap: 20px;
 
   section {
     width: 100%;
