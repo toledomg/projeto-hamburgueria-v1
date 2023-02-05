@@ -2,12 +2,15 @@ import React from "react";
 import CartList from "./CartList/CartList";
 import CartVazio from "./CartVazio/CartVazio";
 import TotalValue from "./TotalValue/TotalValue";
+import { DivCart, UlCart } from "./CartStyles";
 
 function Cart({ cartList, setCartList, soma, removeToCart, removeCartTotal }) {
   return (
-    <div>
-      <h1>Carrinho de Compras</h1>
-      <ul>
+    <DivCart>
+      <section>
+        <h1>Carrinho de Compras</h1>
+      </section>
+      <UlCart>
         {(cartList || []).length > 0 ? (
           <>
             {cartList.map((product) => (
@@ -26,8 +29,8 @@ function Cart({ cartList, setCartList, soma, removeToCart, removeCartTotal }) {
         ) : (
           <CartVazio />
         )}
-      </ul>
-    </div>
+      </UlCart>
+    </DivCart>
   );
 }
 

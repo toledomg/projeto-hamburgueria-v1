@@ -4,10 +4,11 @@ import { useState } from "react";
 import styles from "./styles.module.css";
 import logo from "../../assets/img/logo.svg";
 import FormSearch from "./FormSearch/FormSearch";
+import { StyleHeaders } from "./../../styles/HeaderStyles";
 
 function Headers({ productsList, search, setSearch, searchList }) {
   return (
-    <header className={styles.Headers}>
+    <StyleHeaders className={styles.Headers}>
       <div>
         <div className={styles.logo}>
           <img className="logo" src={logo} alt="logo-hamburgueria-kenzie" />
@@ -20,7 +21,7 @@ function Headers({ productsList, search, setSearch, searchList }) {
           </div>
         )} */}
       </div>
-    </header>
+    </StyleHeaders>
   );
 }
 

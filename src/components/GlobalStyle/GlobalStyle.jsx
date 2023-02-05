@@ -1,7 +1,15 @@
 import React from "react";
 
+import { Global } from "../../styles/Global";
+import { Reset } from "../../styles/Global";
+
 function GlobalStyle() {
-  return <div>GlobalStyle</div>;
+  return (
+    <>
+      <Global />
+      <Reset />
+    </>
+  );
 }
 
 export default GlobalStyle;
