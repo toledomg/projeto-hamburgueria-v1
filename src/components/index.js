@@ -15,6 +15,6 @@ export const DivApp = styled.div`
     gap: 16px;
   }
 
-  @media screen and (min-width: 769px) and (max-width: 4044px) {
+  @media screen and (min-width: 760px) and (max-width: 4044px) {
   }
 `;

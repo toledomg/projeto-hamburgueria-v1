@@ -6,6 +6,11 @@ export const DivTotal = styled.div`
   flex-direction: column;
   gap: 16px;
 
+  hr {
+    width: 100%;
+    border: 1px solid var(--color-gray-20);
+    margin-top: 15px;
+  }
   div {
     width: 100%;
     display: flex;

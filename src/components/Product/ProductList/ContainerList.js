@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const UlList = styled.ul`
   width: 100%;
-  max-width: 350px;
+  max-width: 360px;
   min-width: 350px;
   display: flex;
   justify-content: space-between;
