@@ -8,7 +8,15 @@ function ProductList({ searchList, addToCart, search, setSearch }) {
   return (
     <>
       {(search || []).length > 0 ? (
-        <>{search && <SearchResults search={search} setSearch={setSearch} />}</>
+        <>
+          {search && (
+            <SearchResults
+              search={search}
+              setSearch={setSearch}
+              searchList={searchList}
+            />
+          )}
+        </>
       ) : (
         <Vazio />
       )}

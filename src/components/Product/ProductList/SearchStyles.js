@@ -63,4 +63,12 @@ export const DivSearch = styled.div`
     border: 2px solid var(--color-primary);
     border-radius: 8px;
   }
+
+  section {
+    text-align: center;
+
+    margin: 0 auto;
+
+    padding: 20px;
+  }
 `;
