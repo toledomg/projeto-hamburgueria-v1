@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const DivSearch = styled.div`
   width: 100%;
-  max-width: 900px;
+  max-width: 1400px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,7 +22,7 @@ export const DivSearch = styled.div`
   div > h2 {
     font-style: normal;
     font-weight: 700;
-    font-size: 26px;
+    font-size: 16px;
     line-height: 34px;
 
     color: var(--color-gray-100);
@@ -31,15 +31,15 @@ export const DivSearch = styled.div`
   div > h3 {
     font-style: normal;
     font-weight: 700;
-    font-size: 26px;
+    font-size: 16px;
     line-height: 34px;
 
     color: var(--color-gray-50);
   }
 
   button {
-    width: 137px;
-    height: 40px;
+    width: 100px;
+    height: 30px;
 
     display: flex;
     flex-direction: row;
