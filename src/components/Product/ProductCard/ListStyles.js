@@ -18,7 +18,7 @@ export const LiCart = styled.li`
   gap: 10px;
 
   img {
-    width: 297px;
+    width: 296px;
     height: 150px;
 
     background-color: var(--color-gray-0);
@@ -63,5 +63,9 @@ export const LiCart = styled.li`
     line-height: 24px;
 
     color: var(--color-primary);
+  }
+
+  :hover {
+    border-color: var(--color-gray-4);
   }
 `;
