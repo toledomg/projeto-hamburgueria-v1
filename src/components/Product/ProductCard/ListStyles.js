@@ -66,6 +66,6 @@ export const LiCart = styled.li`
   }
 
   :hover {
-    border-color: var(--color-gray-4);
+    border-color: var(--color-gray-50);
   }
 `;
